@@ -25,11 +25,19 @@ def newtonRaphson(tol):
 	tolerancia = tol
 	x_n = x_0
 	it = 1
+	root = 0
 	while (math.fabs(x_n_1 - x_n) < tolerancia) or (ecuation(x_n_1) == 0):
 		x_n_1 = x_n - (ecuation(x_n) / derivateEcuation(x_n))
-		print 'Iteración: ' + str(it) + '	valor: ' + str(x_n_1)
+		print 'Iteración: ' + str(it) + '	valor inicial: ' + str(x_n) + '	f(x): ' + str(ecuation(x_n)) + "	f'(x): " + str(derivateEcuation(x_n)) + '	posible raíz: ' + str(x_n_1)
 		x_n = x_n_1
 		it += 1
+		if it > 2:
+			if x_n_1 != root:
+				root = x_n_1
+			else:
+				print 'Raíz encontrada:	' + str(root)
+				break
+
 
 # Examples
 if __name__ == '__main__':
