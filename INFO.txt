@@ -1,0 +1,23 @@
+Author:	Trejo Juárez César Alberto
+
+Bienvenido a mi repositorio para la asignatura de Análisis Numérico.
+
+La estructura del repositorio consiste en lo siguiente:
+> Existe una carpeta por cada Método Numérico
+> Cada carpeta contiene un código fuente, imágenes del procesamiento del código, un archivo README.txt
+> El lenguaje utilizado es Python, el cuál se podrá descargar de la siguiente dirección:
+		http://www.python.org/download/
+  la versión implementada es 2.7, existe una herramienta 2to3 para poder pasar código de la versión 2.7
+  a la versión 3.3.
+> Si es requerido descargar todo el repositorio favor de preguntar, se implementa GIT desde la terminal.
+
+
+
+
+Contacto:
+
+>>> cesaralberto@yandex.com
+>>> cesaratj27@gmail.com
+>>> cesaratj27@outlook.com
+
+
