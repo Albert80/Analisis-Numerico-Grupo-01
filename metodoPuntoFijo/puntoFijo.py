@@ -24,7 +24,6 @@ def calculate():
 	root = None
 	errorRel = None
 	before = 0
-	print 'antes del while'
 	while errorRel == None or errorRel > 0.01:
 		now = gFunction(x)
 		print 'Iteración: ' + str(it) + '\tValue x: ' + str(x) + '\tg(x): ' + str(now)
