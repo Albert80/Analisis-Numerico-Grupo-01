@@ -4,7 +4,7 @@
 *	Created on 28 February 2014, 08:18 hrs.
 *	A simple class wich implements an object of
 *	Gauss Method
-*	@see GaussJordan.java
+*	@see Gauss.java
 *
 *	Universidad Nacional Autónoma de México
 *	Análisis Numérico
