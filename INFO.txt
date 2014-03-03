@@ -10,8 +10,10 @@ La estructura del repositorio consiste en lo siguiente:
   la versión implementada es 2.7, existe una herramienta 2to3 para poder pasar código de la versión 2.7
   a la versión 3.3.
 > Si es requerido descargar todo el repositorio favor de preguntar, se implementa GIT desde la terminal.
-
-
+> El lenguaje utilizado para resolver sistemas de ecuaciones es Java.
+> Java es un lenguaje de programación compilado/interpretado, por lo que se requiere un compilar que se
+  puede descargar de la página oficial:
+		https://www.java.com/es/download/
 
 
 Contacto:
