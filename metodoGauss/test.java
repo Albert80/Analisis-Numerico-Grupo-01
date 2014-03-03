@@ -38,5 +38,6 @@ public class test{
 			//System.out.print("Variable " + (i+1) + " >>>\t" + solG[i]); //--> sin redondear
 			System.out.println();
 		}
+	}
 		//*/
 }
