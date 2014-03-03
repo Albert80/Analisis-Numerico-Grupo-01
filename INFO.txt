@@ -14,6 +14,14 @@ La estructura del repositorio consiste en lo siguiente:
 > Java es un lenguaje de programación compilado/interpretado, por lo que se requiere un compilar que se
   puede descargar de la página oficial:
 		https://www.java.com/es/download/
+> Para poder compilar el código Java se requiere ejecutar la siguiente instrucción desde la temrinal:
+		javac nombre_del_archivo.java
+> Una vez que se generé el archivo compilado, es decir, que se tenga:
+		nombre_del_archivo.class
+  Se procede a ejecutar el código con el siguiente comando
+		java nombre_del_archivo
+  Como se puede observar no requiere indicar la extensión .class, ya que la Java Virtual Machine lo
+  identifica por default.
 
 
 Contacto:
