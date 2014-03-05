@@ -157,7 +157,6 @@ public class Gauss{
 				x[i] = x[i] - (A[i][j] * x[j]);
 			}
 		}
-
 		return x; //regresamos soluciones
 	}
 }
