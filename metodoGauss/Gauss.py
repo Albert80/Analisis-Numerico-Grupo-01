@@ -26,6 +26,10 @@ class Gauss(object):
 		self.orden = nxn
 		self.X = [] #Matriz X, soluciones
 
+	def getOrden(self):
+		"""Método que regresa el orden de la matriz"""
+		return self.orden
+
 	def setB(self, matrixB):
 		"""Método para establecer la matriz B"""
 		for i in matrixB:
@@ -96,9 +100,9 @@ class Gauss(object):
 		# Almacenar las soluciones en X
 		for l in range(self.orden - 1, -1, -1):
 			self.X.append(self.B[l])
-			for k in range(self.orden - 1, l, -1): #Aquí el problema
-				for j in range(self.orden, k):
-					self.X[j] = self.X[j] - (self.A[l][k] * self.X[k])
+			for k in range(self.orden): #Aquí el problema
+				#for j in range(self.orden, k):
+				self.X[k] = self.X[k] - (self.A[l][l - k] * self.X[k])
 
 		print
 		return self.X
@@ -112,5 +116,5 @@ if __name__ == '__main__':
 	m.setB(matB)
 	m.setA(matA)
 	soluciones =  m.getX()
-	for s in range(len(soluciones)):
-		print 'Variable ' + str(s+1) + ' >>> ' + str(soluciones[s])
+	for s in range(m.getOrden()-1, -1, -1):
+		print 'Variable ' + str(m.getOrden() - s) + ' >>> ' + str(soluciones[s])
