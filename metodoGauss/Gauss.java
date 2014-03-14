@@ -150,6 +150,17 @@ public class Gauss{
 				B[j] = B[j] - cte * B[i];
 			}
 		}
+
+		//print matriz ordenada------------------
+		System.out.println("\n-->Last Matrix: ");
+		for (int m = 0; m < orden; m++) {
+			for (int n = 0; n < orden; n++) {
+				System.out.print(A[m][n] + "\t");
+			}
+			System.out.println("|" + B[m]);
+		}
+		//---------------------------------------
+
 		//almacenar en X las soluciones
 		for (i = orden - 1; i >= 0; i--) {
 			x[i] = B[i];
