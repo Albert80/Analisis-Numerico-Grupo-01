@@ -101,7 +101,7 @@ class Gauss(object):
 		for l in range(self.getOrden()-1, -1, -1):
 			self.X.append(self.B[l])
 			for j in range(self.getOrden()-1, l, -1):
-				for k in range(len(self.X)): #Aquí el problema
+				for k in range(len(self.X)):
 					if k > 0:
 						self.X[k] = self.X[k] - (self.A[l][j] * self.X[k-1])
 
@@ -111,9 +111,15 @@ class Gauss(object):
 # Examples
 if __name__ == '__main__':
 	m = Gauss(2)
-	matA = [ [1.0,4.0],
+	'''MATA = [ [1.0,4.0],
 			 [3.0,5.0] ]
-	matB = [1.0, 1.0]
+	MATB = [1.0, 1.0]'''
+
+	matA = [ [1.0, -1.0, 2.0, -1.0],
+			 [1.0, 0.0, -1.0, 1.0],
+			 [2.0, 1.0, 3.0, -4.0],
+			 [0.0, -1.0, 1.0, -1.0] ]
+	matB = [6.0, 4.0, -2, 5]
 	m.setB(matB)
 	m.setA(matA)
 	soluciones =  m.getX()
