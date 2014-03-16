@@ -49,7 +49,7 @@ class Gauss(object):
 		for m in range(self.orden):
 			for n in range(self.orden):
 				print str(self.A[m][n]), 
-			print ' |' + str(self.B[m])
+			print '\t|' + str(self.B[m])
 		#-----------------------------------
 		# Ordenamiento de renglones:
 		for k in range(self.orden):
@@ -68,7 +68,7 @@ class Gauss(object):
 		for m in range(self.orden):
 			for n in range(self.orden):
 				print str(self.A[m][n]), 
-			print ' |' + str(self.B[m])
+			print '\t|' + str(self.B[m])
 		#-----------------------------------
 		# Operaciones elementales
 		for i in range(self.orden):
@@ -94,15 +94,16 @@ class Gauss(object):
 		for m in range(self.orden):
 			for n in range(self.orden):
 				print str(self.A[m][n]), 
-			print ' |' + str(self.B[m])
+			print '\t|' + str(self.B[m])
 		#-----------------------------------
 
 		# Almacenar las soluciones en X
-		for l in range(self.orden - 1, -1, -1):
+		for l in range(self.getOrden()-1, -1, -1):
 			self.X.append(self.B[l])
-			for k in range(self.orden): #Aquí el problema
-				#for j in range(self.orden, k):
-				self.X[k] = self.X[k] - (self.A[l][l - k] * self.X[k])
+			for j in range(self.getOrden()-1, l, -1):
+				for k in range(len(self.X)): #Aquí el problema
+					if k > 0:
+						self.X[k] = self.X[k] - (self.A[l][j] * self.X[k-1])
 
 		print
 		return self.X
